@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Chess</string>
+    <string name="title">Welcome to Knight Rider!!</string>
+    <string name="chooseBoard">Please choose a chessBoard to begin!</string>
+
+    <string-array name="boardSizeArray">
+        <item>Choose chess board</item>
+        <item>6 x 6</item>
+        <item>7 x 7</item>
+        <item>8 x 8 </item>
+        <item>9 x 9</item>
+        <item>10 x 10</item>
+        <item>11 x 11</item>
+        <item>12 x 12</item>
+        <item>13 x 13</item>
+        <item>14 x 14</item>
+        <item>15 x 15</item>
+        <item>16 x 16</item>
+
+
+    </string-array>
+    <string name="title_activity_board">BoardActivity</string>
+</resources>
