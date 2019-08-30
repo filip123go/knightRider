@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Toast.makeText(adapterView.getContext(), "Please choose a valid layout", Toast.LENGTH_SHORT).show();
         }else{
             Intent goToBoardActivityIntent = new Intent(MainActivity.this, BoardActivity.class);
-            goToBoardActivityIntent.putExtra("valueFromBoardSizeSpinner",6);
+            goToBoardActivityIntent.putExtra("valueFromBoardSizeSpinner",3);
             startActivity(goToBoardActivityIntent);
             Toast.makeText(adapterView.getContext(), selectedText, Toast.LENGTH_SHORT).show();
         }

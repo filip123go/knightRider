@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +21,9 @@ public class BoardActivity extends AppCompatActivity {
     Button firstBtn;
 
     TableLayout tableLayout;
+    RelativeLayout relativeLayout;
+    ConstraintLayout constraintLayout;
     TableRow tableRow1, tableRow2 , tableRow3 , tableRow4 , tableRow5 , tableRow6;
-    Button b1,b2,b3,b4,b5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class BoardActivity extends AppCompatActivity {
         int boardSizeFromMainActivity = mIntent.getIntExtra("valueFromBoardSizeSpinner",0);
 
         tableLayout = new TableLayout(this);
+        int tableColumns = 4;
         tableRow1 = new TableRow(this);
         tableRow2 = new TableRow(this);
         tableRow3 = new TableRow(this);
@@ -38,23 +41,24 @@ public class BoardActivity extends AppCompatActivity {
         tableRow5 = new TableRow(this);
         tableRow6 = new TableRow(this);
         Drawable icon=this.getResources(). getDrawable( R.drawable.iconsearchtr);
-        b1 = new Button(this);
-        b2 = new Button(this);
-        b3 = new Button(this);
-        b4 = new Button(this);
-        b5 = new Button(this);
-
 
         TableLayout.LayoutParams lp = new TableLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+        tableLayout.setLayoutParams
+                (new ViewGroup.MarginLayoutParams
+                        (110, ViewGroup.LayoutParams.MATCH_PARENT));
         tableLayout.setLayoutParams(lp);
-        b1.setBackgroundColor(Color.WHITE);
-        b2.setBackgroundColor(Color.BLACK);
-        b3.setBackgroundColor(Color.WHITE);
-        b4.setBackgroundColor(Color.BLACK);
-        b5.setBackgroundColor(Color.WHITE);
 
-for (int k=0; k<boardSizeFromMainActivity; k++) {
-    for (int i = 0; i < 5; i++) {
+        relativeLayout = new RelativeLayout(this);
+        RelativeLayout.LayoutParams r1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+        relativeLayout.setLayoutParams(r1);
+
+        constraintLayout = new ConstraintLayout(this);
+        ConstraintLayout.LayoutParams c1 = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+        constraintLayout.setLayoutParams(c1);
+
+
+//for (int k=0; k<3; k++) {
+    for (int i = 0; i < tableColumns; i++) {
         Button blackButton = new Button(this);//Creating Button
         Button whiteButton = new Button(this);//Creating Button
         blackButton.setId(i);//Setting Id for using in future
@@ -65,7 +69,7 @@ for (int k=0; k<boardSizeFromMainActivity; k++) {
         tableRow1.addView(whiteButton);
     }
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < tableColumns; i++) {
         Button blackButton = new Button(this);//Creating Button
         Button whiteButton = new Button(this);//Creating Button
         blackButton.setId(i);//Setting Id for using in future
@@ -76,7 +80,7 @@ for (int k=0; k<boardSizeFromMainActivity; k++) {
         tableRow2.addView(blackButton);
     }
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < tableColumns; i++) {
         Button blackButton = new Button(this);//Creating Button
         Button whiteButton = new Button(this);//Creating Button
         blackButton.setId(i);//Setting Id for using in future
@@ -86,7 +90,8 @@ for (int k=0; k<boardSizeFromMainActivity; k++) {
         tableRow3.addView(blackButton);
         tableRow3.addView(whiteButton);
     }
-    for (int i = 0; i < 5; i++) {
+//
+    for (int i = 0; i < tableColumns; i++) {
         Button blackButton = new Button(this);//Creating Button
         Button whiteButton = new Button(this);//Creating Button
         blackButton.setId(i);//Setting Id for using in future
@@ -97,7 +102,7 @@ for (int k=0; k<boardSizeFromMainActivity; k++) {
         tableRow4.addView(blackButton);
     }
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < tableColumns; i++) {
         Button blackButton = new Button(this);//Creating Button
         Button whiteButton = new Button(this);//Creating Button
         blackButton.setId(i);//Setting Id for using in future
@@ -107,7 +112,8 @@ for (int k=0; k<boardSizeFromMainActivity; k++) {
         tableRow5.addView(blackButton);
         tableRow5.addView(whiteButton);
     }
-    for (int i = 0; i < 5; i++) {
+
+    for (int i = 0; i < tableColumns; i++) {
         Button blackButton = new Button(this);//Creating Button
         Button whiteButton = new Button(this);//Creating Button
         blackButton.setId(i);//Setting Id for using in future
@@ -118,42 +124,16 @@ for (int k=0; k<boardSizeFromMainActivity; k++) {
         tableRow6.addView(blackButton);
     }
 
-}
-
-
-//        tableRow1.addView(b1);
-//        tableRow1.addView(b2);
-//        tableRow1.addView(b3);
-//        tableRow2.addView(b4);
-//        tableRow2.addView(b5);
-
+//}
         tableLayout.addView(tableRow1);
         tableLayout.addView(tableRow2);
         tableLayout.addView(tableRow3);
         tableLayout.addView(tableRow4);
         tableLayout.addView(tableRow5);
         tableLayout.addView(tableRow6);
+        constraintLayout.addView(tableLayout);
 
-
-
-
-
-
-
-
-
-
-
-        setContentView(tableLayout);
-
-
-
-
-
-
-
-
-        firstBtn = findViewById(R.id.firstBtn);
+        setContentView(constraintLayout);
 //        firstBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
