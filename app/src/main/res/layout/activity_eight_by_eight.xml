@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".boards.SevenBySeven">
+    tools:context=".boards.EightByEight">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -38,39 +38,70 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/coords0_0"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
+                        android:background="@android:color/white"
+                        android:onClick="startAndEndCoords"
                         android:text="0,0" />
 
                     <Button
+                        android:id="@+id/coords1_0"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,1" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="1,0"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords2_0"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,2" />
+                        android:background="@android:color/white"
+                        android:onClick="startAndEndCoords"
+                        android:text="2,0" />
 
                     <Button
+                        android:id="@+id/coords3_0"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,3" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="3,0"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords4_0"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,4" />
+                        android:onClick="startAndEndCoords"
+                        android:text="4,0" />
 
                     <Button
+                        android:id="@+id/coords5_0"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,5" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="5,0"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords6_0"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,6" />
+                        android:onClick="startAndEndCoords"
+                        android:text="6,0" />
+
+                    <Button
+                        android:id="@+id/coords7_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="7,0"
+                        android:textColor="#FFFFFF" />
 
 
                 </TableRow>
@@ -81,40 +112,68 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/coords0_1"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,0" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="0,1"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords1_1"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,1" />
+                        android:onClick="startAndEndCoords"
+                        android:text="1,1" />
 
                     <Button
+                        android:id="@+id/coords2_1"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,2" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="2,1"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords3_1"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,3" />
+                        android:onClick="startAndEndCoords"
+                        android:text="3,1" />
 
                     <Button
+                        android:id="@+id/coords4_1"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,4" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="4,1"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords5_1"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,5" />
+                        android:onClick="startAndEndCoords"
+                        android:text="5,1" />
 
                     <Button
+                        android:id="@+id/coords6_1"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,6" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="6,1"
+                        android:textColor="#FFFFFF" />
 
+                    <Button
+                        android:id="@+id/coords7_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="7,1" />
 
                 </TableRow>
 
@@ -124,39 +183,68 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/coords0_2"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,0" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
                         android:text="0,2" />
 
                     <Button
+                        android:id="@+id/coords1_2"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,3" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="1,2"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords2_2"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,4" />
+                        android:onClick="startAndEndCoords"
+                        android:text="2,2" />
 
                     <Button
+                        android:id="@+id/coords3_2"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,5" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="3,2"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords4_2"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,6" />
+                        android:onClick="startAndEndCoords"
+                        android:text="4,2" />
+
+                    <Button
+                        android:id="@+id/coords5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="5,2"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/coords6_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="6,2" />
+
+                    <Button
+                        android:id="@+id/coords7_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="7,2"
+                        android:textColor="#FFFFFF" />
 
 
                 </TableRow>
@@ -167,40 +255,68 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/coords0_3"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,0" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="0,3"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords1_3"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,1" />
+                        android:onClick="startAndEndCoords"
+                        android:text="1,3" />
 
                     <Button
+                        android:id="@+id/coords2_3"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,2" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="2,3"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords3_3"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,3" />
+                        android:onClick="startAndEndCoords"
+                        android:text="3,3" />
 
                     <Button
+                        android:id="@+id/coords4_3"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,4" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="4,3"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords5_3"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,5" />
+                        android:onClick="startAndEndCoords"
+                        android:text="5,3" />
 
                     <Button
+                        android:id="@+id/coords6_3"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,6" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="6,3"
+                        android:textColor="#FFFFFF" />
 
+                    <Button
+                        android:id="@+id/coords7_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="7,3" />
 
                 </TableRow>
 
@@ -210,39 +326,69 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/coords0_4"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,0" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,2" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,3" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
                         android:text="0,4" />
 
                     <Button
+                        android:id="@+id/coords1_4"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,5" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="1,4"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords2_4"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,6" />
+                        android:onClick="startAndEndCoords"
+                        android:text="2,4" />
+
+                    <Button
+                        android:id="@+id/coords3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="3,4"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/coords4_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="4,4" />
+
+                    <Button
+                        android:id="@+id/coords5_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="5,4"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/coords6_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="6,4" />
+
+                    <Button
+                        android:id="@+id/coords7_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="7,4"
+                        android:textColor="#FFFFFF" />
+
                 </TableRow>
 
                 <TableRow
@@ -251,39 +397,70 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/coords0_5"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,0" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="0,5"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords1_5"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,1" />
+                        android:onClick="startAndEndCoords"
+                        android:text="1,5" />
 
                     <Button
+                        android:id="@+id/coords2_5"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,2" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="2,5"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords3_5"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,3" />
+                        android:onClick="startAndEndCoords"
+                        android:text="3,5" />
 
                     <Button
+                        android:id="@+id/coords4_5"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,4" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="4,5"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords5_5"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,5" />
+                        android:onClick="startAndEndCoords"
+                        android:text="5,5" />
 
                     <Button
+                        android:id="@+id/coords6_5"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,6" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="6,5"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/coords7_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="7,5" />
+
+
                 </TableRow>
 
                 <TableRow
@@ -292,39 +469,69 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/coords0_6"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,0" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,1" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,2" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,3" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,4" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:text="0,5" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
                         android:text="0,6" />
+
+                    <Button
+                        android:id="@+id/coords1_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="1,6"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/coords2_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="2,6" />
+
+                    <Button
+                        android:id="@+id/coords3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="3,6"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/coords4_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="4,6" />
+
+                    <Button
+                        android:id="@+id/coords5_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="5,6"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/coords6_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="6,6" />
+
+                    <Button
+                        android:id="@+id/coords7_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="7,6"
+                        android:textColor="#FFFFFF" />
+
                 </TableRow>
 
                 <TableRow
@@ -333,40 +540,74 @@
                     android:layout_height="wrap_content">
 
                     <Button
+                        android:id="@+id/coords0_7"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,0" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="0,7"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords1_7"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,1" />
+                        android:onClick="startAndEndCoords"
+                        android:text="1,7" />
 
                     <Button
+                        android:id="@+id/coords2_7"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,2" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="2,7"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords3_7"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,3" />
+                        android:onClick="startAndEndCoords"
+                        android:text="3,7" />
 
                     <Button
+                        android:id="@+id/coords4_7"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,4" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="4,7"
+                        android:textColor="#FFFFFF" />
 
                     <Button
+                        android:id="@+id/coords5_7"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,5" />
+                        android:onClick="startAndEndCoords"
+                        android:text="5,7" />
 
                     <Button
+                        android:id="@+id/coords6_7"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:text="0,6" />
+                        android:background="@android:color/black"
+                        android:onClick="startAndEndCoords"
+                        android:text="6,7"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/coords7_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:onClick="startAndEndCoords"
+                        android:text="7,7" />
+
+
                 </TableRow>
+
+
+
 
             </TableLayout>
         </HorizontalScrollView>
