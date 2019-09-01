@@ -29,7 +29,7 @@ public class KnightTest {
 
 
         try {
-            KnightSearch search = new KnightSearch(start, target ,4);
+            KnightSearch search = new KnightSearch(start, target ,dimensions);
             ArrayList<KnightMove> path = search.knight_BFS();
 
             if (path.size() < 3) {

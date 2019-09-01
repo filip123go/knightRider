@@ -11,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ public class BoardActivity extends AppCompatActivity {
 
     TableLayout tableLayout;
     RelativeLayout relativeLayout;
+    ScrollView scrollView;
     ConstraintLayout constraintLayout;
     public KnightTest knightTest = new KnightTest();
     public static int[] start = new int[2];
@@ -37,6 +39,12 @@ public class BoardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent mIntent = getIntent();
+
+        start[0] = 257;
+        start[1] = 257;
+
+        target[0] = 257;
+        target[1] = 257;
 
         int boardSizeFromMainActivity = mIntent.getIntExtra("valueFromBoardSizeSpinner", 0);
 
@@ -49,6 +57,11 @@ public class BoardActivity extends AppCompatActivity {
 
         tableLayout = new TableLayout(this);
 
+        ScrollView scroll = new ScrollView(this);
+//        scroll.setBackgroundColor(android.R.color.transparent);
+        scroll.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
+                ViewGroup.LayoutParams.FILL_PARENT));
+
 
         for (int t = 0; t < 5; t++) {
             tableRowArrayList.add(new TableRow(this));
@@ -57,8 +70,8 @@ public class BoardActivity extends AppCompatActivity {
         TableRow.LayoutParams trp = new TableRow.LayoutParams(MATCH_PARENT, MATCH_PARENT);
 
         TableLayout.LayoutParams lp = new TableLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
-//        lp.setMargins(100,100,100,100);
         tableLayout.setLayoutParams(lp);
+
 
         relativeLayout = new RelativeLayout(this);
         RelativeLayout.LayoutParams r1 = new RelativeLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
@@ -71,7 +84,7 @@ public class BoardActivity extends AppCompatActivity {
 
 
 //for (int k=0; k<3; k++) {
-        int tableColumns = 4;
+        int tableColumns = 6;
 
         blackAndWhiteTileButtonsReturned = createTiles.createBlackAndWiteTiles(tableColumns, this);
         tableRowArrayList.get(0).addView(blackAndWhiteTileButtonsReturned.get(0).button);
@@ -87,6 +100,8 @@ public class BoardActivity extends AppCompatActivity {
                     System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + finalBlackAndWhiteTileButtonsReturned.get(finalSetBlackCoord).getBlackCoords());
                     start[0] = Integer.parseInt(finalBlackAndWhiteTileButtonsReturned.get(finalSetBlackCoord).getBlackCoords().get(0).toString());
                     start[1] = Integer.parseInt(finalBlackAndWhiteTileButtonsReturned.get(finalSetBlackCoord).getBlackCoords().get(1).toString());
+//                    selectStartingAndEndingPionts(start,target);
+//                    calculateDistance(start,target);
                 }
             });
         }
@@ -99,16 +114,18 @@ public class BoardActivity extends AppCompatActivity {
                     System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" + finalBlackAndWhiteTileButtonsReturned.get(finalSetWhiteCoord).getWhiteCoords());
                     target[0] = Integer.parseInt(finalBlackAndWhiteTileButtonsReturned.get(finalSetWhiteCoord).getWhiteCoords().get(0).toString());
                     target[1] = Integer.parseInt(finalBlackAndWhiteTileButtonsReturned.get(finalSetWhiteCoord).getWhiteCoords().get(1).toString());
-                    calculateDistance(start,target);
+//                    selectStartingAndEndingPionts(start,target);
+//                    calculateDistance(start,target);
                 }
             });
         }
 
 
-        for (int q = 0; q < finalBlackAndWhiteTileButtonsReturned.size(); q++) {
-            if (q == 0 || q == 8) {
+        for (int q = 0; q < 4;q++) {
+            if (q == 0 ) {
                 continue;
             }
+
             tableRowArrayList.get(0).addView(blackAndWhiteTileButtonsReturned.get(q).button);
 
 //            tableRowArrayList.get(0).addView(blackAndWhiteTileButtonsReturned.get(2).button);
@@ -133,6 +150,14 @@ public class BoardActivity extends AppCompatActivity {
 //            tableRowArrayList.get(1).addView(blackAndWhiteTileButtonsReturned.get(15).button);
         }
 
+        for (int q = 4; q < 8;q++) {
+            tableRowArrayList.get(1).addView(blackAndWhiteTileButtonsReturned.get(q+1).button);
+        }
+
+        for (int q = 9; q < 13;q++) {
+            tableRowArrayList.get(2).addView(blackAndWhiteTileButtonsReturned.get(q+1).button);
+        }
+
 //
 //        tableRowArrayList.get(2).addView(blackAndWhiteTileButtonsReturned.get(17).button);
 //
@@ -146,17 +171,37 @@ public class BoardActivity extends AppCompatActivity {
 //        tableRowArrayList.get(2).addView(blackAndWhiteTileButtonsReturned.get(23).button);
 
 
-        for (int w = 0; w < 2; w++) {
+        for (int w = 0; w < 3; w++) {
             tableLayout.addView(tableRowArrayList.get(w), MATCH_PARENT, MATCH_PARENT);
         }
-        relativeLayout.addView(tableLayout);
-        setContentView(relativeLayout);
+//        scrollView.addView(tableLayout);
+//        relativeLayout.addView(tableLayout);
+        scroll.addView(tableLayout);
+        setContentView(scroll);
 
 
     }
     public void calculateDistance( int[] start,int[] target) {
-        String shortestPath = knightTest.calculate(start, target ,6);
-        Toast.makeText(getApplicationContext(), shortestPath, Toast.LENGTH_LONG).show();
+        if (start[0] == 257 ){
+//            Toast.makeText(getApplicationContext(), "Please choose a valid starting point", Toast.LENGTH_SHORT).show();
+        }else if (target[0] == 257){
+//            Toast.makeText(getApplicationContext(), "Please choose a valid ending point", Toast.LENGTH_SHORT).show();
+        }else {
+            String shortestPath = knightTest.calculate(start, target, 6);
+            Toast.makeText(getApplicationContext(), shortestPath, Toast.LENGTH_LONG).show();
+        }
     }
 
+    public void selectStartingAndEndingPionts( int[] start,int[] target){
+        if (start[0] == 257 ){
+            Toast.makeText(getApplicationContext(), "End point selected" + target[0] + " - " +target[1], Toast.LENGTH_SHORT).show();
+            //Starting point have not being selected
+        }else if (target[0] == 257){
+            Toast.makeText(getApplicationContext(), "Start point selected" + start[0] + " - " +start[1], Toast.LENGTH_SHORT).show();
+            //ending point have not been selected
+        }else if (start[0] != 257 && target[0] != 257){
+            calculateDistance(start,target);
+        }
+
+    }
 }

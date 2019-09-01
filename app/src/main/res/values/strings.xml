@@ -3,6 +3,7 @@
     <string name="title">Welcome to Knight Rider!!</string>
     <string name="chooseBoard">Please choose a chessBoard to begin!</string>
 
+    <string name="title_activity_board">BoardActivity</string>
     <string-array name="boardSizeArray">
         <item>Choose chess board</item>
         <item>6 x 6</item>
@@ -19,5 +20,4 @@
 
 
     </string-array>
-    <string name="title_activity_board">BoardActivity</string>
 </resources>
