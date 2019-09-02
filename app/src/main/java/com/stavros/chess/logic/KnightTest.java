@@ -1,42 +1,25 @@
 package com.stavros.chess.logic;
 
-import java.util.Scanner;
 import java.util.ArrayList;
 
 public class KnightTest {
 
-    public String calculate(int[] start , int[] target , int dimensions) {
+    public String[] calculate(int[] start , int[] target , int dimensions) {
          String stringToReturn = "";
-//        int[] start = new int[2];
-//        target = new int[2];
-
-//				Scanner scan = new Scanner(System.in);
-//				System.out.println("Enter begining x coordinate: ");
-//				start[0] = scan.nextInt();
-//				System.out.println("Enter begining y coordinate: ");
-//				start[1] = scan.nextInt();
-//				System.out.println("Enter target x coordinate: ");
-//				target[0] = scan.nextInt();
-//				System.out.println("Enter target y coordinate: ");
-//				target[1] = scan.nextInt();
-
-//		System.out.println(getCharForNumber(0));
-
-//        start[0] = 0;
-//        start[1] = 0;
-//        target[0] = 3;
-//        target[1] = 3;
-
+        String stringToReturnInCoords = "";
 
         try {
             KnightSearch search = new KnightSearch(start, target ,dimensions);
             ArrayList<KnightMove> path = search.knight_BFS();
 
-            if (path.size() < 3) {
-                System.out.println("The steps are not 3");
+            if (path.size() != 3) {
+//                System.out.println("The moves from starting point to target are above 3 , please play again.");
+                stringToReturn= "The moves from starting point to target are not exactly 3 , please play again.";
+                stringToReturnInCoords = "";
             }else{
                 for (int i = 0; i < path.size(); ++i) {
                     stringToReturn = stringToReturn + " >> " + path.get(i).to_string();
+                    stringToReturnInCoords = stringToReturnInCoords + " >> " + path.get(i).to_string_in_coords();
                     System.out.print(" >> " + path.get(i).to_string());
                 }
             }
@@ -45,7 +28,7 @@ public class KnightTest {
         }
 
 
-        return stringToReturn;
+        return new String[]{stringToReturn , stringToReturnInCoords};
     }
 
     //translate numbers to letters 0->A , 1->B etc

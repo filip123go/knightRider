@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.stavros.chess.R;
+import com.stavros.chess.ResultsActivity;
 import com.stavros.chess.logic.KnightTest;
 
 public class FifteenByFifteen extends AppCompatActivity {
@@ -28,6 +29,7 @@ public class FifteenByFifteen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fifteen_by_fifteen);
+        checkHowManyTimesEnteredInStartAndEndCoords = 0;
         Intent mIntent = getIntent();
 
         boardSizeFromMainActivity = mIntent.getIntExtra("valueFromBoardSizeSpinner", 0);
@@ -53,12 +55,16 @@ public class FifteenByFifteen extends AppCompatActivity {
 
     }
 
-    public String checkStartOrTarget(boolean startFlag, Boolean endFlag, int[] start, int[] target) {
+    public String[] checkStartOrTarget(boolean startFlag, Boolean endFlag, int[] start, int[] target) {
         if (startFlag && endFlag) {
-            String coordsReturn = knightTest.calculate(start, target, boardSizeFromMainActivity);
-            Toast.makeText(this, coordsReturn, Toast.LENGTH_SHORT).show();
+            String[] coordsReturn = knightTest.calculate(start, target, boardSizeFromMainActivity);
+            Intent goToResult = new Intent(FifteenByFifteen.this, ResultsActivity.class);
+            goToResult.putExtra("resultsToPassToResultClass" , coordsReturn);
+            goToResult.putExtra("start" , start);
+            goToResult.putExtra("target" , target);
+            startActivity(goToResult);
             return coordsReturn;
         }
-        return "startFlag or endFlag not true";
+        return null;
     }
 }

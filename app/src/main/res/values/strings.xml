@@ -4,6 +4,11 @@
     <string name="chooseBoard">Please choose a chessBoard to begin!</string>
 
     <string name="title_activity_board">BoardActivity</string>
+    <string name="play_again">PLAY AGAIN!</string>
+    <string name="loading_simple_table_data">Loading simple table data</string>
+    <string name="loading_chess_table_data">Loading chess table Data</string>
+    <string name="target">Target</string>
+    <string name="start">Start</string>
     <string-array name="boardSizeArray">
         <item>Choose chess board</item>
         <item>6 x 6</item>

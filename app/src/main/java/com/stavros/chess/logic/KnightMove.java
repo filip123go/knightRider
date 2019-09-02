@@ -98,6 +98,11 @@ public class KnightMove  {
                 String.valueOf(coords[1]+1) + "]";
     }
 
+    public String to_string_in_coords() {
+        return "[" + String.valueOf(coords[0]) + ", " +
+                String.valueOf(coords[1]) + "]";
+    }
+
     public int[] get_coords() {
         return coords;
     }
