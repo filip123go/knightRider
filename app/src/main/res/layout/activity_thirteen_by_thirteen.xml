@@ -573,6 +573,8 @@
                         android:text="10,4" />
 
                     <Button
+                        android:background="@android:color/black"
+                        android:textColor="#FFFFFF"
                         android:id="@+id/coords11_4"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
